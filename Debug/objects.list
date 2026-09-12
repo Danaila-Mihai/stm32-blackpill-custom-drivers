@@ -1,0 +1,4 @@
+"./drivers/ST_src/startup_stm32f401ccux.o"
+"./drivers/ST_src/syscalls.o"
+"./drivers/custom_src/clock.o"
+"./main.o"
