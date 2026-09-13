@@ -1,4 +1,5 @@
 /Binaries/
+/Debug/
 *.launch
 *.o
 .project
