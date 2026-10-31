@@ -1,6 +1,6 @@
 #ifndef DRIVERS_CUSTOM_HEADERS_TIMER_H_
 #define DRIVERS_CUSTOM_HEADERS_TIMER_H_
-#include "../ST_headers/stm32f401xc.h"
+#include "clock.h"
 #endif /* DRIVERS_CUSTOM_HEADERS_TIMER_H_ */
 
 enum counting_mode {
@@ -10,7 +10,7 @@ enum counting_mode {
 };
 
 typedef struct timer_config {
-   counting_mode counting;
+   enum counting_mode counting;
 } *timer_config;
 
-void timer_init()
+void timer_init(TIM_TypeDef* TIMx);

@@ -1,6 +1,6 @@
 #ifndef DRIVERS_CUSTOM_CLOCK_H_
 #define DRIVERS_CUSTOM_CLOCK_H_
-
+#include "../ST_headers/stm32f401xc.h"
 // AHB1 enable bits
 // see reference manual pages 118-119
 #define GPIOA_CLOCK_ENABLE_BIT 	1 << 0
