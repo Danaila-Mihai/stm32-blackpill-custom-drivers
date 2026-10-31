@@ -3,5 +3,6 @@
 #include <stdint.h>
 
 void clock_init(uint32_t clock_enable_bits_mask) {
+    // see reference manual page 118
     RCC->AHB1ENR |= clock_enable_bits_mask;
 }

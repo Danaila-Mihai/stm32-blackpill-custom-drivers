@@ -1,6 +1,7 @@
 #ifndef DRIVERS_CUSTOM_CLOCK_H_
 #define DRIVERS_CUSTOM_CLOCK_H_
 
+// see reference manual pages 118-119
 #define GPIOA_CLOCK_ENABLE_BIT 	1 << 0
 #define GPIOB_CLOCK_ENABLE_BIT 	1 << 1
 #define GPIOC_CLOCK_ENABLE_BIT 	1 << 2
