@@ -11,7 +11,7 @@ void SystemInit() {
 
 int main(void) {
 
-    clock_init(GPIOC_CLOCK_ENABLE_BIT);
+    GPIO_clock_init(GPIOC);
 
     struct GPIO_pin_config output_config;
     output_config.mode = OUTPUT;
