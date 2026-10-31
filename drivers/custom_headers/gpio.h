@@ -3,11 +3,16 @@
 #include <stdint.h>
 #include "../ST_headers/stm32f401xc.h"
 
+// boolean values exist here primarily to prevent the programmer from accidentally
+// passing the wrong argument to a function that expects one bit
 typedef enum boolean_state {
     LOW = 0U,
     HIGH = 1U
 } bool;
 
+// enums rather than defines force programmer to insert valid values in config
+// structs
+// see reference manual pages 158-159
 enum pin_mode {
     INPUT       = 0U,
     OUTPUT      = 1U,

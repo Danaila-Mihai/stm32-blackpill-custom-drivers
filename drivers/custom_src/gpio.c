@@ -1,6 +1,7 @@
 #include "../custom_headers/gpio.h"
 
 void GPIO_pin_init(GPIO_TypeDef* GPIO_port, uint8_t pin, GPIO_pin_config config) {
+    // see reference manual page 158
     GPIO_port->MODER &= ~(0b11U << (2 * pin));
     GPIO_port->MODER |= (uint32_t)config->mode << (2 * pin);
 
@@ -17,6 +18,7 @@ void GPIO_pin_init(GPIO_TypeDef* GPIO_port, uint8_t pin, GPIO_pin_config config)
             break;
     }
 
+    // see reference manual page 159
     switch (config->pull_state) {
         case NO_PULL:
             GPIO_port->PUPDR &= ~(0b11U << (2 * pin));
@@ -37,6 +39,7 @@ void GPIO_pin_init(GPIO_TypeDef* GPIO_port, uint8_t pin, GPIO_pin_config config)
 }
 
 void GPIO_pin_digital_write(GPIO_TypeDef* GPIO_port, uint8_t pin, bool value) {
+    // see reference manual page 161
     if (value == HIGH) {
         GPIO_port->BSRR = 1U << pin;
     } else if (value == LOW) {
